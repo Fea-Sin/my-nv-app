@@ -78,3 +78,9 @@ export default {
   },
 };
 ```
+
+## 独立的`computed`属性
+
+与`ref`和`watch`类似，也可以使用从 Vue 导入的`computed`函数在 Vue 组件外部创建计算属性。
+`computed`的第一个参数，它是一个类似 getter 的回调函数，输出的是一个只读的**响应式引用**。
+为了访问新创建的计算变量的 value，我们需要像`ref`一样使用`.value`property

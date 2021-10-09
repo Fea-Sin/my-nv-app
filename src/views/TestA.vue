@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, watch, computed } from "vue";
 
 const counter = ref(0);
+const threeTheCounter = computed(() => counter.value * 3);
 
 console.log("响应式counter", counter.value);
 
@@ -32,6 +33,7 @@ const setCount = () => {
   <div class="Tbox">
     <div>TESTA</div>
     <div class="number">{{ counter }}</div>
+    <div class="number">{{ threeTheCounter }}</div>
     <div><button @click="setCount" class="btn">+</button></div>
   </div>
 </template>

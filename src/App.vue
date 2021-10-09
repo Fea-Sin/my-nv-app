@@ -1,10 +1,10 @@
 <template>
   <div id="nav">
     <router-link class="item" to="/">Home</router-link>
-
     <router-link class="item" to="/about">About</router-link>
-
     <router-link class="item" to="/testa">TestA</router-link>
+    <router-link class="item" to="/testb">TestB</router-link>
+    <router-link class="item" to="/testc">TestC</router-link>
   </div>
   <router-view />
 </template>
