@@ -39,3 +39,42 @@ const counter = ref(0);
 但前缀为`on`，`mounted`是`onMounted`
 
 这些函数接受一个回调，当钩子被调用时，该回调将被执行
+
+## `watch`响应式更改
+
+就像我们在组件中使用`watch`选项并在 property 上设置侦听器一样，我们可以使用从 Vue
+导入的`watch`函数执行相同的操作。它接受 3 个参数
+
+- 一个想要侦听的响应式引用或 getter 函数
+
+- 一个回调
+
+- 可选的配置选项
+
+```vue
+<script setup>
+import { ref, watch } from "vue";
+const counter = ref(0);
+
+watch(counter, (newValue, oldValue) => {
+  console.log("The new counter value is: " + counter.value);
+});
+</script>
+```
+
+**等效的选项式 API**
+
+```js
+export default {
+  data() {
+    return {
+      counter: 0,
+    };
+  },
+  watch: {
+    counter(newValue, oldValue) {
+      console.log("The new counter value is: " + this.counter);
+    },
+  },
+};
+```
