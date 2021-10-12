@@ -1,5 +1,6 @@
 <script>
 export default {
+  // eslint-disable-next-line
   data() {
     return {
       readersNumber: 0,
@@ -8,6 +9,7 @@ export default {
       },
     };
   },
+  // eslint-disable-next-line
   render() {
     return (
       <div>
