@@ -185,3 +185,95 @@ const Component = defineComponent({
   },
 });
 ```
+
+### 类型声明 `refs`
+
+Refs 根据初始值推断类型。有时我们可能需要为 ref 的内部值指定复杂类型，我们可以在调用
+ref 重写默认推理时简单地传递一个泛型参数
+
+```ts
+const year = ref<string | number>("2020");
+
+year.value = 2021; // ok
+```
+
+> TIP
+>
+> 如果泛型的类型未知，建议将`ref`转换为`Ref<T>`
+
+### 类型声明 `reactive`
+
+当声明类型`reactive`property，我们可以使用接口
+
+```ts
+import { defineComponent, reactive } from "vue";
+
+interface Book {
+  title: string;
+  year?: number;
+}
+
+export default defineComponent({
+  name: "HelloWorld",
+  setup() {
+    const book = reactive<Book>({ title: "Vue 3 Guide" });
+    // or
+    const book: Book = reactive({ title: "Vue 3 Guide" });
+    // or
+    const book = reactive({ title: "Vue 3 Guide" }) as Book;
+  },
+});
+```
+
+### 类型声明 `computed`
+
+计算值将根据返回值自动推断类型
+
+```ts
+import { defineComponent, ref, computed } from "vue";
+
+export default defineComponent({
+  name: "CounterButton",
+  setup() {
+    let count = ref(0);
+
+    // 只读
+    const doubleCount = computed(() => count.value * 2);
+
+    const result = doubleCount.value.split(""); // Property 'split' does not exist on type 'number'
+  },
+});
+```
+
+### 为事件处理器添加类型
+
+在处理原生 DOM 事件的时候，正确地为处理函数的参数添加类型会是有用的
+
+```vue
+<template>
+  <input type="text" @change="handleChange" />
+</template>
+```
+
+```ts
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  setup() {
+    // 'evt' 将会是 `any`类型
+    const handleChange = (evt) => {
+      console.log(evt.target.value); // 此处 TS 将会抛出异常
+    };
+
+    return { handleChange };
+  },
+});
+```
+
+解决方案是将事件的目标转换为正确的类型
+
+```ts
+const handleChange = (evt: Event) => {
+  console.log((evt.target as HTMLInputElement).value);
+};
+```
