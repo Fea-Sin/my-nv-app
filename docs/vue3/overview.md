@@ -6,4 +6,4 @@
 
 - [TypeScript 支持](./vue-ts.md)
 
-- [组合式 API](./composition-api.md)
+- [单文件组件 Setup](./script-setup.md)
