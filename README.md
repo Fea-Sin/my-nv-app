@@ -2,7 +2,7 @@
 
 My-Next-Vue-App
 
-This is about Vue3
+Vue3
 
 ## Project setup
 
