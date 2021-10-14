@@ -18,24 +18,10 @@ npm run dev
 
 ## [vue 3](./docs/vue3/overview.md)
 
-## vue-class
+## 手把手写 Vue 单元测试
 
-## Project build
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Run your unit tests
+## Run your unit tests
 
 ```
 npm run test
-```
-
-### Lints and fixes files
-
-```
-npm run lint
 ```

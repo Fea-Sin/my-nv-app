@@ -10,4 +10,11 @@ describe("HelloWorld.vue", () => {
     });
     expect(wrapper.text()).to.include(msg);
   });
+
+  it("manipulates state", async () => {
+    const m_wrapper = shallowMount(HelloWorld);
+    const m_text = "manipulates props";
+    await m_wrapper.setProps({ msg: m_text });
+    expect(m_wrapper.text()).to.include(m_text);
+  });
 });

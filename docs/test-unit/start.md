@@ -57,3 +57,104 @@ expect(wrapper.text()).to.contain("1");
 的测试变慢
 
 Vue Test Utils 允许你通过`shallowMount`方法只挂载一个组件而不渲染其子组件（即保留它们的存根）
+
+## 生命周期钩子
+
+在使用`mount`或`shallowMount`方法时，你可以期望你的组件响应 Vue 所有生命周期事件。
+但是请务必注意的是，除非使用`Wrapper.destroy()`，否则`beforeDestroy`和`destroyed`
+将不会触发
+
+此外，组件在每个测试结束时并不会自动销毁，并且将由用户来决定是否要存根或手动清理那些在测试
+结束前继续运行的任务
+
+## 断言触发的事件
+
+每个挂载的包裹器都会通过其背后的 Vue 实例自动记录所有被触发的事件。你可以用`wrapper.emitted()`
+方法取回这些事件记录
+
+```ts
+wrapper.vm.$emit("foo");
+wrapper.vm.$emit("foo", 123);
+
+// wrapper.emitted() 返回以下对象
+{
+  foo: [[], [123]];
+}
+```
+
+然后你可以基于这些数据来设置断言
+
+```ts
+// 断言事件已经被触发
+expect(wrapper.emitted().foo).toBeTruthy();
+
+// 断言事件的数量
+expect(wrapper.emitted().foo.length).toBe(2);
+
+// 断言事件的有效数据
+expect(wrapper.emitted().foo(1)).toEqual([123]);
+```
+
+## 操作组件状态
+
+你可以在包裹器上用`setData`或`setProps`方法直接操作组件状态
+
+```ts
+it("manipulates", async () => {
+  await wrapper.setData({ count: 10 });
+
+  await wrapper.setProps({ foo: "bar" });
+});
+```
+
+### 仿造 Prop
+
+你可以使用 Vue 在内置`propsData`选项向组件传入 prop:
+
+```ts
+import { mount } from "@vue/test-utils";
+
+mount(Component, {
+  propsData: {
+    aProp: "some value",
+  },
+});
+```
+
+你也可以用`wrapper.setProps({})`方法更新这些已经挂载的组件的 prop
+
+### 避免`setData`
+
+编写测试避免使用`setData`，我们在使用`mount`或者`shallowMount`时需要指定一些选项
+
+```ts
+it("should render Foo", async () => {
+  const wrapper = mount(Foo, {
+    data() {
+      return {
+        show: true,
+      };
+    },
+  });
+
+  expect(wrapper.text()).toMatch(/Foo/);
+});
+
+it("should not render Foo", async () => {
+  const wrapper = mount(Foo, {
+    data() {
+      return {
+        show: false,
+      };
+    },
+  });
+
+  expect(wrapper.text()).not.toMatch(/Foo/);
+});
+```
+
+## 鼠标点击
+
+使用 Sinon 检测函数调用
+
+[实例](../../tests/start/YesNoComponent.spec.ts)
