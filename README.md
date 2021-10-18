@@ -1,8 +1,6 @@
 # my-nv-app
 
-My-Next-Vue-App
-
-Vue3
+Vue3 My-Next-Vue-App
 
 ## Project setup
 
@@ -36,13 +34,21 @@ npm run dev
 
 - [Wrapper 常用 API](./docs/test-unit/wrapper-api.md)
 
-## Vue3 源码小解
+## 前置知识
 
 - [Proxy 的应用](./package/start/docs/Proxy.md)
 
 - [Vue2 与 Vue3 数据绑定之别](./package/start/docs/to-proxy.md)
 
-- [基础数据结构]()
+- [基础数据结构](./package/start/docs/unit.md)
+
+- [TypeScript 概述](./package/start-ts/docs/overview.md)
+
+- [TypeScript 泛型](./package/start-ts/docs/genericity.md)
+
+## Vue3 源码小解
+
+- [createApp]()
 
 ## Run your unit tests
 
