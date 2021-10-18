@@ -40,7 +40,9 @@ npm run dev
 
 - [Proxy 的应用](./package/start/docs/Proxy.md)
 
-- [Vue2 与 Vue3 数据绑定之别]()
+- [Vue2 与 Vue3 数据绑定之别](./package/start/docs/to-proxy.md)
+
+- [基础数据结构]()
 
 ## Run your unit tests
 

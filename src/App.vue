@@ -6,6 +6,7 @@
     <router-link class="item" to="/testb">TestB</router-link>
     <router-link class="item" to="/testc">TestC</router-link>
     <router-link class="item" to="/testd">TestD</router-link>
+    <router-link class="item" to="/teste">TestE</router-link>
   </div>
   <router-view />
 </template>
