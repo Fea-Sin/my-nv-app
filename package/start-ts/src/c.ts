@@ -19,8 +19,8 @@ function sayA<T extends Lengthwise>(arg: T): number {
 
 // function overloading
 
-// function add(arg1: string, arg2: string): string
-// function add(arg1: number, arg2: number): number
+function add(arg1: string, arg2: string): string;
+function add(arg1: number, arg2: number): number;
 
 function add<T, U>(arg1: T, arg2: U) {
   if (typeof arg1 === "string" && typeof arg2 === "string") {

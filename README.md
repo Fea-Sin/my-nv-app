@@ -52,6 +52,8 @@ npm run dev
 
 - [createApp](./package/vue-back/createApp.md)
 
+- [defineComponent](./package/vue-back/defineComponent.md)
+
 ## Run your unit tests
 
 ```
