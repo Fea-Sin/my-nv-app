@@ -51,3 +51,9 @@ Chai 是一个流行的常配合 Mocha 使用的断言库
 - vue-template-compiler
 
 - DOM（可以在 Node 环境下的 jsdom 或真实浏览器）
+
+## 运行本项目实例
+
+```
+npm run test
+```
