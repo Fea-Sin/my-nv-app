@@ -1,15 +1,21 @@
 {
   "name": "@nvapp/shared",
   "version": "1.0.0",
-  "description": "",
+  "description": "shared utils",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha --config mocharc.json --reporter=spec"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/sinon": "^10.0.4",
     "chai": "^4.3.4",
     "mocha": "^9.1.3",
+    "ts-node": "^10.3.0",
     "typescript": "^4.4.4"
   }
 }
