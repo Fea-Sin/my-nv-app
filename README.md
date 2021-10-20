@@ -56,6 +56,32 @@ npm run dev
 
 - [nextTick](./package/vue-back/nextTick.md)
 
+### @vue/shared
+
+- [extend](./package/shared/src/index.ts)
+
+- [remove](./package/shared/src/index.ts)
+
+- [hasOwn](./package/shared/src/index.ts)
+
+- [isArray](./package/shared/src/index.ts)
+
+- [isString](./package/shared/src/index.ts)
+
+- [isFunction](./package/shared/src/index.ts)
+
+- [isObject](./package/shared/src/index.ts)
+
+- [isSymbol](./package/shared/src/index.ts)
+
+- [isPromise](./package/shared/src/index.ts)
+
+- [isPlainObject](./package/shared/src/index.ts)
+
+- [isSet](./package/shared/src/index.ts)
+
+- [isMap](./package/shared/src/index.ts)
+
 ## Run your unit tests
 
 ```
