@@ -8,6 +8,7 @@
     <router-link class="item" to="/testd">TestD</router-link>
     <router-link class="item" to="/teste">TestE</router-link>
     <router-link class="item" to="/testf">TestF</router-link>
+    <router-link class="item" to="/testg">TestG</router-link>
   </div>
   <router-view />
 </template>

@@ -8,7 +8,7 @@ const MyComponent = defineComponent({
     };
   },
   methods: {
-    increment() {
+    increment(): void {
       this.count++;
     },
   },

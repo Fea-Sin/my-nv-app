@@ -54,6 +54,8 @@ npm run dev
 
 - [defineComponent](./package/vue-back/defineComponent.md)
 
+- [nextTick](./package/vue-back/nextTick.md)
+
 ## Run your unit tests
 
 ```
