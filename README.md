@@ -84,9 +84,23 @@ npm run dev
 
 ## Rollup
 
+Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`、`AMD`
+
+- browser 模式 `UMD`、`IIFE`、`AMD`
+
+- node 模式 `CommonJS`、`UMD`
+
+- ES module
+
+在 ES module 中可以加载 CommonJS 模块，并可以打包生成 `ES module`、`CommonJS`、`UMD`、`IIFE`、`AMD` 中的任何一种模式
+
 - [概述](./package/start-roll/docs/overview.md)
 
 - [Rollup 配置](./package/start-roll/docs/config.md)
+
+- [插件](./package/start-roll/docs/plugin-config.md)
+
+- [Rollup Minifiy Bundle](./package/start-roll/docs/integration.md)
 
 ## Run your unit tests
 

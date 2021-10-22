@@ -1,6 +1,6 @@
 {
   "name": "@nvapp/start-roll",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -9,10 +9,14 @@
   "scripts": {
     "build:a": "rollup --config rollup.config.js",
     "build:b": "rollup --config rollup.config.b.js",
+    "build:amd": "rollup --config rollup.config.amd.js",
     "build:ciife": "rollup --config src/rollb/rollup.config.js",
     "build:cumd": "rollup --config src/rollb/rollup.config.umd.js",
     "build:d": "rollup --config src/rollc/rollup.config.js",
-    "build": "npm run build:a && npm run build:b"
+    "build:e": "rollup --config src/roll-json/rollup.config.js",
+    "build:ecjs": "rollup --config src/roll-json/rollup.config.cjs.js",
+    "build:eiife": "rollup --config src/roll-json/rollup.config.iife.js",
+    "build": "npm run build:a"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +24,7 @@
   "devDependencies": {
     "rollup": "^2.58.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   }
 }

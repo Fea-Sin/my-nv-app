@@ -46,6 +46,9 @@ rollup main.js --file bundle.js --format umd --name "myBundle"
 
 在使用 CommonJS 时，必须导入完整的工具或库对象
 
+[源码](../src/roll-json/main.cjs.js)
+[编译结果](../src/roll-json/bundle.cjs.js)
+
 ```js
 var utils = require("utils");
 
