@@ -16,6 +16,8 @@
     "build:e": "rollup --config src/roll-json/rollup.config.js",
     "build:ecjs": "rollup --config src/roll-json/rollup.config.cjs.js",
     "build:eiife": "rollup --config src/roll-json/rollup.config.iife.js",
+    "build:f": "rollup --config src/roll-package/rollup.config.js",
+    "build:fpeer": "rollup --config src/roll-package/rollup.config.peer.js",
     "build": "npm run build:a"
   },
   "keywords": [],
@@ -26,5 +28,9 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "the-answer": "^1.0.0"
   }
 }
