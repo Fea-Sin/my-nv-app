@@ -7,9 +7,7 @@
           "chrome": "58",
           "ie": "11"
         },
-        "useBuiltIns": "usage",
-        "modules": false,
-        "debug": true
+        "modules": false
       }
     ]
   ],

@@ -5,8 +5,9 @@ import commonjs from "rollup-plugin-commonjs";
 export default {
   input: "src/main.js",
   output: {
-    file: "dist/bundle.esm.js",
-    format: "esm",
+    file: "dist/bundle.umd.js",
+    format: "umd",
+    name: "MyRollupBabel",
   },
   plugins: [
     commonjs(),

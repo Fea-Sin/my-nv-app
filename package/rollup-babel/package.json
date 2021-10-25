@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "babel src -d lib"
+    "compile": "babel src -d lib",
+    "build": "rollup --config rollup.config.js",
+    "build:umd": "rollup --config rollup.config.umd.js"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +14,12 @@
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.8",
+    "@babel/plugin-external-helpers": "^7.14.5",
     "@babel/plugin-transform-runtime": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "@babel/runtime-corejs3": "^7.15.4",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   }
 }
