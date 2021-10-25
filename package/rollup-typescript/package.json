@@ -1,0 +1,23 @@
+{
+  "name": "rollup-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:esm": "rollup --config rollup.config.js",
+    "build:cjs": "rollup --config rollup.config.cjs.js",
+    "build:umd": "rollup --config rollup.config.umd.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "rollup": "^2.58.1",
+    "typescript": "^4.4.4"
+  }
+}
