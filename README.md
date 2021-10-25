@@ -102,7 +102,9 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [Rollup Minify Bundle](./package/start-roll/docs/bundle-mini.md)
 
-- [Rollup + Babel]()
+- [Rollup + Babel](./package/rollup-babel/docs/overview.md)
+
+- [Rollup + Babel 插件](./package/rollup-babel/docs/plugin.md)
 
 - [Rollup + TS]()
 
