@@ -1,9 +1,10 @@
 {
   "name": "@nvapp/shared",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "shared utils",
   "main": "index.js",
   "module": "dist/bundle.esm.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha --config mocharc.json --reporter=spec",
     "build": "rollup --config rollup.config.js",
@@ -11,7 +12,8 @@
   },
   "files": [
     "index.js",
-    "dist"
+    "dist",
+    "types"
   ],
   "keywords": [
     "shared"
