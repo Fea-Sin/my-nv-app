@@ -5,7 +5,7 @@
   "main": "index.js",
   "module": "dist/bundle.esm.js",
   "scripts": {
-    "test": "mocha --config mocharc.json --reporter=spec",
+    "test": "env TS_NODE_PROJECT=\"tsconfig.testing.json\" mocha --config mocharc.json --reporter=spec",
     "build": "rollup --config rollup.config.js",
     "prepublishOnly": "npm run test && npm run build"
   },
