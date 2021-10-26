@@ -16,7 +16,8 @@
     "types"
   ],
   "keywords": [
-    "shared"
+    "shared",
+    "utils"
   ],
   "author": "feasin",
   "license": "MIT",
