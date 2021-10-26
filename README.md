@@ -82,6 +82,10 @@ npm run dev
 
 - [isMap](./package/shared/src/index.ts)
 
+已经发布为 npm 包，可以将公共 utils 抽离成包，项目开发时直接安装使用
+
+[@nvapp/shared](https://www.npmjs.com/package/@nvapp/shared)
+
 ## Rollup
 
 Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`、`AMD`
