@@ -112,6 +112,8 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [Rollup + TS](./package/rollup-typescript/docs/overview.md)
 
+- [Rollup + Babel New](./package/shared-use/docs/overview.md)
+
 ## Run your unit tests
 
 ```
