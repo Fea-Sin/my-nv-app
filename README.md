@@ -116,7 +116,7 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 ## npm link
 
-- [概述]()
+- [概述](./package/shared-use/docs/link.md)
 
 ## Run your unit tests
 
