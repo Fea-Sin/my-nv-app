@@ -13,13 +13,11 @@
     "@babel/core": "^7.15.8",
     "@babel/plugin-transform-runtime": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "@babel/runtime-corejs3": "^7.15.4",
+    "@babel/runtime": "^7.15.4",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "rollup": "^2.58.3"
   },
-  "dependencies": {
-    "@babel/runtime": "^7.15.4"
-  }
+  "dependencies": {}
 }

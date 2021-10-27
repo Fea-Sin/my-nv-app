@@ -1,6 +1,5 @@
 import commonjs from "@rollup/plugin-commonjs";
-import { getBabelOutputPlugin, babel } from "@rollup/plugin-babel";
-import path from "path";
+import { babel } from "@rollup/plugin-babel";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 
 export default {
@@ -10,20 +9,6 @@ export default {
     nodeResolve(),
     babel({
       babelHelpers: "runtime",
-      presets: [
-        [
-          "@babel/preset-env",
-          {
-            targets: {
-              edge: "17",
-              firefox: "60",
-              chrome: "67",
-              safari: "11.1",
-            },
-          },
-        ],
-      ],
-      plugins: [["@babel/plugin-transform-runtime"]],
     }),
   ],
   output: [
