@@ -118,6 +118,12 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [概述](./package/shared-use/docs/link.md)
 
+## Vue2 => Vue3
+
+- [组件基础](./docs/v2to3/component-basics.md)
+
+- [组件注册](./docs/v2to3/component-registration.md)
+
 ## Run your unit tests
 
 ```
