@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-## [vue 3](./docs/vue3/overview.md)
+## [vue 3]
 
 - [组合式 API](./docs/vue3/composition-api.md)
 
@@ -123,6 +123,14 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 - [组件基础](./docs/v2to3/component-basics.md)
 
 - [组件注册](./docs/v2to3/component-registration.md)
+
+- [单向数据流](./docs/v2to3/props.md)
+
+- [自定义事件](./docs/v2to3/events.md)
+
+- [响应式计算和侦听](./docs/v2to3/reactivity-compute-watchers.md)
+
+- [Provide/Inject]()
 
 ## Run your unit tests
 
