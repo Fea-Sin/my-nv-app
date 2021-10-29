@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-## [vue 3]
+## vue 3
 
 - [组合式 API](./docs/vue3/composition-api.md)
 
