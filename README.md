@@ -130,7 +130,7 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [响应式计算和侦听](./docs/v2to3/reactivity-compute-watchers.md)
 
-- [Provide/Inject]()
+- [Provide/Inject](./docs/v2to3/provide-inject.md)
 
 ## Run your unit tests
 

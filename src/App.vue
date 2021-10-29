@@ -9,6 +9,7 @@
     <router-link class="item" to="/teste">TestE</router-link>
     <router-link class="item" to="/testf">TestF</router-link>
     <router-link class="item" to="/testg">TestG</router-link>
+    <router-link class="item" to="/testh">TestH</router-link>
   </div>
   <router-view />
 </template>
