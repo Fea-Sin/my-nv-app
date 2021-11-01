@@ -11,6 +11,7 @@
     <router-link class="item" to="/testg">TestG</router-link>
     <router-link class="item" to="/testh">TestH</router-link>
     <router-link class="item" to="/testi">TestI</router-link>
+    <router-link class="item" to="/testj">TestJ</router-link>
   </div>
   <router-view />
 </template>

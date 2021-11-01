@@ -1,9 +1,12 @@
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, watchEffect } from "vue";
 
 export default defineComponent({
   setup() {
     const orange = ref(true);
+    watchEffect(() => {
+      console.log("orange watchEffect-->", orange.value);
+    });
 
     return {
       orange,
@@ -21,6 +24,11 @@ export default defineComponent({
   mounted() {
     console.log("Mounted--->", this.orange);
   },
+  methods: {
+    checkChange(e: Event) {
+      this.orange = (e.target as any).checked;
+    },
+  },
 });
 </script>
 
@@ -32,7 +40,13 @@ export default defineComponent({
       <label for="chox1">苹果</label>
     </div>
     <div>
-      <input type="checkbox" id="chox2" value="橘子" :checked="orange" />
+      <input
+        type="checkbox"
+        id="chox2"
+        value="橘子"
+        :checked="orange"
+        @change="checkChange"
+      />
       <label for="chox2">橘子</label>
     </div>
   </div>
