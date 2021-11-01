@@ -1,18 +1,21 @@
 <script lang="tsx">
-import { defineComponent } from "vue";
+import { defineComponent, inject } from "vue";
 
 export default defineComponent({
-  inject: ["todoLength"],
+  // @ts-ignore
+  setup(props) {
+    const userTodoLength = inject("todoLength");
 
-  render() {
-    return (
-      <div class="show">
-        <div>STSTUS: {(this as any).todoLength}</div>
-      </div>
-    );
+    return {
+      userTodoLength,
+    };
   },
 });
 </script>
+
+<template>
+  <div class="show">STATUS: {{ userTodoLength }}</div>
+</template>
 
 <style lang="less" scoped>
 .show {

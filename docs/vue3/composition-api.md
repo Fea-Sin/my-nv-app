@@ -1,5 +1,16 @@
 # 组合式 API
 
+通过创建 Vue 组件，我们可以将界面中重复的部分连同其功能一起提取为可重用的代码片段。
+仅此一项就可以使我们的应用在可维护性和灵活性方面走得相当远。然而，我们的经验证明，
+光靠这一点可能并不够。
+
+使用(`data`、`computed`、`methods`、`watch`)组件选项来组织逻辑通常非常有效，
+然而，当我们的组件开始变得大时，逻辑关注点的列表会曾长。碎片化的关注点使理解和维护组件
+变的困难，选项的分离掩盖了潜在的逻辑问题。此外，在处理单个逻辑关注点时，必须不断的跳转
+相关代码
+
+组合式 API 就是要解决上述问题，在 Vue 组件中，我们将此位置称为`setup`
+
 ## `setup` 组件选项
 
 新的 `setup` 选项在组件创建之前执行，一旦 `props` 被解析，就将作为组合式 API 的入口
@@ -12,6 +23,23 @@
 
 `setup`选项是一个接收`props`和`context`的函数，此外，我们将`setup`返回的所有内容都暴露给
 组件的其余部分（计算属性、方法、声明周期钩子等等）以及组件的模版
+
+```js
+export default {
+  props: {
+    user: {
+      type: String,
+      required: true,
+    },
+  },
+  setup(props) {
+    console.log(props);
+
+    // 这里返回的任何内容都可以用于组件的其余部分
+    return {};
+  },
+};
+```
 
 ## 带 `ref` 的响应式变量
 
@@ -39,6 +67,29 @@ const counter = ref(0);
 但前缀为`on`，`mounted`是`onMounted`
 
 这些函数接受一个回调，当钩子被调用时，该回调将被执行
+
+```js
+import { fetchUserRepositories } from "@/api/repositories";
+import { ref, onMounted } from "vue";
+
+export default {
+  //...
+  setup(props) {
+    const repositories = ref([]);
+    const getUserRepositories = async () => {
+      repositories.value = await fetchUserRepositories(props.user);
+    };
+
+    // `mounted`时调用 getUserRepositories
+    onMounted(getUserRepositories);
+
+    return {
+      repositories,
+      getUserRepositories,
+    };
+  },
+};
+```
 
 ## `watch`响应式更改
 
@@ -75,6 +126,27 @@ export default {
     counter(newValue, oldValue) {
       console.log("The new counter value is: " + this.counter);
     },
+  },
+};
+```
+
+## toRefs
+
+使用`toRefs`创建对`props`的响应式式引用
+
+```js
+import { toRefs } from "vue";
+import { fetchUserRepositories } from "@/api/repositories";
+
+export default {
+  // ...
+  setup(props) {
+    const { user } = toRefs(props);
+    const repositories = ref([]);
+
+    const getUserRepositories = async () => {
+      repositories.value = await fetchUserRepositories(user.value);
+    };
   },
 };
 ```

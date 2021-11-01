@@ -26,7 +26,7 @@ export default defineComponent({
   },
   methods: {
     checkChange(e: Event) {
-      this.orange = (e.target as any).checked;
+      this.orange = (e.target as HTMLInputElement).checked;
     },
   },
 });
