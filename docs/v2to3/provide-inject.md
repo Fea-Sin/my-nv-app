@@ -20,6 +20,13 @@ app.component("todo-list", {
     todoLength: this.todos.length,
   },
 });
+
+app.component("todo-list-statistics", {
+  inject: ["todoLength"],
+  created() {
+    console.log("Injected property: ", this.todoLength);
+  },
+});
 ```
 
 要访问组件实例 property，我们需要将`provide`转换为返回对象的函数
@@ -46,3 +53,16 @@ app.component("todo-list", {
 1. 子组件不需要知道 inject 的 property 来自哪里
 
 ## 处理响应性
+
+在上面的例子中，如果我们更改了`todos`的列表，这个变化并不会反映在 inject 的 property 中。
+这是因为默认情况下，`provide/inject`绑定并不是**响应式**的。
+
+如何实现相应性
+
+- 我们可以通过传递一个`ref`或`reactive`对象给 provide 的 property
+
+或者
+
+- 给 provide 的 property 分配一个组合式 API`computed`
+
+[实例]()
