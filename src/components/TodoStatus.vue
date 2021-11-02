@@ -1,4 +1,4 @@
-<script lang="tsx">
+<script lang="ts">
 import { defineComponent, inject } from "vue";
 
 export default defineComponent({

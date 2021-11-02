@@ -132,6 +132,8 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [Provide/Inject](./docs/v2to3/provide-inject.md)
 
+- [插件](./docs/v2to3/plugins.md)
+
 ## Run your unit tests
 
 ```
