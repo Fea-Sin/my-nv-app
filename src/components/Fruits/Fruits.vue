@@ -4,21 +4,18 @@ import { defineComponent, ref, watchEffect } from "vue";
 export default defineComponent({
   setup() {
     const orange = ref(true);
+    const apple = ref(false);
     watchEffect(() => {
       console.log("orange watchEffect-->", orange.value);
     });
 
     return {
       orange,
+      apple,
     };
   },
   props: {
     fruits: Array,
-  },
-  data() {
-    return {
-      apple: true,
-    };
   },
   emits: ["update:fruits"],
   mounted() {
