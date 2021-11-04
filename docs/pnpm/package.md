@@ -209,3 +209,36 @@ pnpm update --recursive --workspace express
 - --recursive
 
 取消链接在所有子目录中找到的所有`package`
+
+## pnpm publish
+
+发布一个包到注册表
+
+```
+pnpm [-r] publish [<tarball|folder>] [--tag <tag>] [--access <public|restricted>]
+```
+
+当在一个工作空间内发布时，工作空间根目录的 LICENSE 文件和`package`一起打包。除非`package`有专属的
+许可证
+
+递归运行命令`pnpm -r publish`，pnpm 将发布所有尚未发布到注册表的`package`版本
+
+- --tag <tag>
+
+使用给定的`tag`发布`package`，默认情况下会更新`latest`的`tag`
+
+例如，在 foo 目录
+
+```bash
+pnpm publish --tag next
+```
+
+在项目中，使用 foo 的 next 版本
+
+```
+pnpm add foo@next
+```
+
+- --force
+
+尝试发布`package`，即使在注册表中的版本已经存在
