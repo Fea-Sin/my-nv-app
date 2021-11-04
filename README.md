@@ -142,6 +142,8 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [package-cli](./docs/pnpm/package.md)
 
+- [run](./docs/pnpm/run.md)
+
 ## Run your unit tests
 
 ```
