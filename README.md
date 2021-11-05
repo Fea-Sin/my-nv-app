@@ -128,6 +128,10 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [配置](./docs/pnpm/config.md)
 
+## Vite
+
+- [概述](./docs/vite/overview.md)
+
 ## Run your unit tests
 
 ```
