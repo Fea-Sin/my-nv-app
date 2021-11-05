@@ -58,29 +58,7 @@ npm run dev
 
 ### @vue/shared
 
-- [extend](./package/shared/src/index.ts)
-
-- [remove](./package/shared/src/index.ts)
-
-- [hasOwn](./package/shared/src/index.ts)
-
-- [isArray](./package/shared/src/index.ts)
-
-- [isString](./package/shared/src/index.ts)
-
-- [isFunction](./package/shared/src/index.ts)
-
-- [isObject](./package/shared/src/index.ts)
-
-- [isSymbol](./package/shared/src/index.ts)
-
-- [isPromise](./package/shared/src/index.ts)
-
-- [isPlainObject](./package/shared/src/index.ts)
-
-- [isSet](./package/shared/src/index.ts)
-
-- [isMap](./package/shared/src/index.ts)
+- [@vue/shared](./package/shared/docs/overview.md)
 
 已经发布为 npm 包，可以将公共 utils 抽离成包，项目开发时直接安装使用
 
