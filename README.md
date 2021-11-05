@@ -131,5 +131,5 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 ## Run your unit tests
 
 ```
-npm run test
+pnpm run test -r
 ```
