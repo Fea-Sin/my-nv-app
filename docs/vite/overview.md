@@ -108,3 +108,75 @@ import json from "./example.json";
 
 import { field } from "./example.json";
 ```
+
+## Glob 导入
+
+Vite 支持使用特殊的`import.meta.glob`函数从文件系统导入多个模块
+
+```js
+const modules = import.meta.glob(`./dir/*.js`);
+```
+
+以上将会被转译为下面的样子
+
+```js
+// vite 生成的代码
+const modules = {
+  "./dir/foo.js": () => import("./dir/foo.js"),
+  "./dir/bar.js": () => import("./dir/bar.js"),
+};
+```
+
+你可以遍历`modules`对象的 key 值来访问相应的模块
+
+```js
+for (const path in modules) {
+  modules[path]().then((mod) => {
+    console.log(path, mod);
+  });
+}
+```
+
+匹配到的文件默认是懒加载的，通过动态导入实现，并会在构建时分离为独立的 chunk。如果你倾向于
+直接引入所有的模块，例如依赖于这些模块执行的副作用，可以使用`import.meta.globEager`
+
+```js
+const modules = import.meta.globEager("./dir/*.js");
+```
+
+会被转译为下面的样子
+
+```js
+import * as __glob__0_0 from "./dir/foo.js";
+import * as __glob__0_1 from "./dir/bar.js";
+
+const modules = {
+  "./dir/foo.js": __glob__0_0,
+  ".dir/bar.js": __glob__0_1,
+};
+```
+
+## 构建优化
+
+vite 会自动地将一个异步 chunk 模块中使用到的 CSS 代码抽取出来并为其生成一个单独的文件，
+这个 CSS 文件将在该异步 chunk 加载完成时自动通过一个`<link>`标签载入，该异步 chunk 会保证
+只在 CSS 加载完毕后再执行
+
+如果你更倾向于将所有的 CSS 抽取到一个文件中，可以通过设置`build.cssCodeSplit`为`false`来禁用 CSS 代码分割
+
+### 异步 Chunk 加载优化
+
+例如 chunk`A`依赖 chunk`C`
+
+在无优化的情况下，当异步 chunk`A`被导入时，浏览器将必须请求和解析`A`，然后它才清楚也需要 chunk`C`，
+这会导致额外的网路往返
+
+```
+Entry --> A --> C
+```
+
+Vite 将使用一个预加载步骤自动重写代码，来分割动态导入调用，当`A`被请求时`C`也将被同时请求
+
+```
+Entry ---> (A + C)
+```

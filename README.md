@@ -132,6 +132,12 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [概述](./docs/vite/overview.md)
 
+- [插件](./docs/vite/plugin.md)
+
+- [依赖预构建](./docs/vite/dep-build.md)
+
+- [构建生产版本](./docs/vite/build.md)
+
 ## Run your unit tests
 
 ```
