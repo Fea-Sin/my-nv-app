@@ -144,7 +144,7 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 ## Lint
 
-- [概述](./package/lint/docs/overview.md)
+- [概述](./docs/lint/overview.md)
 
 ## Run your unit tests
 
