@@ -4,7 +4,7 @@ function say() {
   console.log("prettier--->", Hello);
 }
 
-const aT = { foo: "bar"};
+const aT = { foo: "bar" };
 
 export default {
   Hello,
