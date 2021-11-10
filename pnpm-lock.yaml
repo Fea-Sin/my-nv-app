@@ -86,9 +86,11 @@ importers:
     specifiers:
       husky: ^7.0.4
       lint-staged: ^11.2.6
+      prettier: ^2.2.1
     devDependencies:
       husky: 7.0.4
       lint-staged: 11.2.6
+      prettier: 2.4.1
 
   package/pnpm-start:
     specifiers: {}
