@@ -20,5 +20,6 @@ module.exports = {
     semi: ["error", "always"],
     quotes: ["error", "double"],
     "comma-dangle": "off",
+    "space-before-function-paren": "off",
   },
 };
