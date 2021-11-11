@@ -71,7 +71,7 @@ document.getElementById("foo").className = classes.red;
 
 ## CSS 预处理
 
-Vite 提供了对`.scss`、`.sass`、`.less`、`.styl`、`.stylus`文件的内置支持，必须按转相应的预处理依赖
+Vite 提供了对`.scss`、`.sass`、`.less`、`.styl`、`.stylus`文件的内置支持，必须安装相应的预处理依赖
 
 ```bash
 # .scss and .sass
