@@ -13,6 +13,10 @@
 
 ```bash
 npm install husky --save-dev
+
+# or
+
+pnpm add husky --save-dev
 ```
 
 ### usage
@@ -24,6 +28,14 @@ npm set-script prepare "husky install"
 npm run prepare
 ```
 
+或者
+
+```bash
+# 在"package.json" `scripts`中增加`"prepare": "husky install"`
+
+pnpm run prepare
+```
+
 > 注意
 > husky 与 git 命令相关联，所以必须是有`.git`(在 git 根目录)
 
@@ -31,6 +43,10 @@ npm run prepare
 
 ```bash
 npx husky add .husky/pre-commit "npm test"
+
+# or
+
+pnpx husky add .husky/pre-commit "npm test"
 ```
 
 ## 与 `lint-staged`集成
@@ -60,4 +76,6 @@ or
 . "$(dirname "$0")/_/husky.sh"
 
 npx lint-staged
+# or
+pnpx lint-staged
 ```
