@@ -18,6 +18,21 @@ Vite 为 Vue 提供第一优先级支持
 
 - Vue3 JSX 支持`@vitejs/plugin-vue-jsx`
 
+## 命令行界面
+
+安装了 Vite 的项目中，可以在 npm scripts 中使用`vite`可执行文件，或者直接使用
+`npx vite`运行它
+
+```json
+{
+  "scripts": {
+    "dev": "vite", // 启动开发服务器
+    "build": "vite build", // 为生产环境构建产物
+    "serve": "vite preview" // 本地预览生产构建物
+  }
+}
+```
+
 ## JSX
 
 `.jsx`和`.tsx`文件同样开箱即用，JSX 的转译同样是通过`esbuild`，默认是 React16 风格
