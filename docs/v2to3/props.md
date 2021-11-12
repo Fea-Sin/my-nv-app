@@ -50,37 +50,45 @@ computed: {
 
 ```js
 app.component("my-component", {
-  propA: Number,
-  // 多个可能的类型
-  propB: [String, Number],
-  // 必填的字段
-  propC: {
-    type: String,
-    require: true,
-  },
-  // 带有默认值，基本值
-  propD: {
-    type: Number,
-    default: 10,
-  },
-  // 带有默认值，引用值
-  propE: {
-    type: Object,
-    default() {
-      return { message: "hi" };
+  props: {
+    propA: Number,
+
+    // 多个可能的类型
+    propB: [String, Number],
+
+    // 必填的字段
+    propC: {
+      type: String,
+      require: true,
     },
-  },
-  // 自定义验证函数
-  propF: {
-    validator(value) {
-      return ["success", "warning", "danger"].includes(value);
+
+    // 带有默认值，基本值
+    propD: {
+      type: Number,
+      default: 10,
     },
-  },
-  // 具有默认值的函数
-  propG: {
-    type: Function,
-    default() {
-      return "Default function";
+
+    // 带有默认值，引用值
+    propE: {
+      type: Object,
+      default() {
+        return { message: "hi" };
+      },
+    },
+
+    // 自定义验证函数
+    propF: {
+      validator(value) {
+        return ["success", "warning", "danger"].includes(value);
+      },
+    },
+
+    // 具有默认值的函数
+    propG: {
+      type: Function,
+      default() {
+        return "Default function";
+      },
     },
   },
 });
