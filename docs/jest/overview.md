@@ -31,4 +31,4 @@ yarn add --dev jest
 
 Jest 与 Babel 联合使用 [实例](../../package/start-jest/__tests__/sum.spec.js)
 
-Jest 与 TypeScript 联合使用 []()
+Jest 与 TypeScript 联合使用 [实例](../../package/start-jest/__tests__/sum-ts.spec.ts)

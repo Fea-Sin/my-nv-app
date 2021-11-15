@@ -16,6 +16,9 @@ pnpm add --save-dev vue-jest@next
 pnpm add --save-dev @vue/test-utils@next
 ```
 
+> 由于 Jest@27 与 vue3 冲突，暂时需要安装 26 号版本
+> `jest@26` `ts-jest@26`
+
 Jest 并能懂 Vue 和 TypeScript，所以我们必须在`jest.config.js`做相关配置
 
 ```js
