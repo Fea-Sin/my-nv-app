@@ -28,3 +28,7 @@ yarn add --dev jest
 ```
 
 我们先写两个数相加的函数做测试 [实例](../../package/start-jest/__tests__/sum.test.js)
+
+Jest 与 Babel 联合使用 [实例](../../package/start-jest/__tests__/sum.spec.js)
+
+Jest 与 TypeScript 联合使用 []()

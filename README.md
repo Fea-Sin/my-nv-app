@@ -150,6 +150,8 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [概述](./docs/jest/overview.md)
 
+- [Add testing to Vite]()
+
 ## Run your unit tests
 
 ```
