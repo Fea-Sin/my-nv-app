@@ -71,3 +71,15 @@ pnpm 内置了对单一存储库（也称为多包存储库、多项目存储库
 
 这个功能允许您可以发布转化之后的包到远端，并且可以正常使用本地工作空间的`package`，而不需要其他
 中间步骤
+
+## link-workspace-packages
+
+- 默认值：`true`
+- 类型：`true`, `false`, `deep`
+
+如果启用了此选项，本地可用的`packages`将被链接到`node_modules`中而不是从注册表下载，
+这在`monorepo`项目中使用起来十分方便。如果您需要将本地`packages`也链接到子依赖项，则可以
+设置为`deep`
+
+否则，`packages`将全部从注册表下载并安装，不过，工作空间的`packages`仍然可以通过`workspace:`
+范围协议被链接到

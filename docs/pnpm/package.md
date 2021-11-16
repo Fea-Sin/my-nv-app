@@ -4,6 +4,20 @@
 
 `pnpm add package-name`默认会从`npm registry`安装最新的`package-name`
 
+如果在 workspace 中执行，该命令将首先去检查这个 workspace 中的其他项目是否已经使用了
+这个指定的包，如果是的话，就使用这个包的版本范围来进行安装
+
+可以通过以下方式安装包：
+
+- tag: `pnpm add express@nightly`
+- version: `pnpm add express@1.0.0`
+- version range: `pnpm add express@2 react@">=0.1.0 <0.2.0"`
+
+### 从 workspace 安装
+
+需要注意的是当我们使用 workspace 安装依赖时，会从配置的原处进行安装，当然取决于是否设置了
+`link-workspace-packages`，以及是否使用了`workspace: range protocol`
+
 ## 从本地安装
 
 从本地安装的两种方法
