@@ -24,6 +24,8 @@ npm run dev
 
 - [单文件组件 Setup](./docs/vue3/script-setup.md)
 
+- [应用配置](./docs/vue3/app-config.md)
+
 ## 手把手写 Vue 单元测试
 
 - [概述](./docs/test-unit/overview.md)
