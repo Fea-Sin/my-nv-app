@@ -124,6 +124,18 @@ default: `false`
 
 自动修复损坏的 lock 文件入口
 
+- `--frozen-lockfile`
+
+添加于`v1.37.1`，类型`boolean`
+
+默认值：
+
+- 非 CL: false
+- CL: true，如果存在 lock 文件
+
+如果设置为`true`，pnpm 不会生成 lockfile，如果 lockfile 与 manifest 不同步，文件需要更新或不存在 lockfile
+会安装失败
+
 ## pnpm update
 
 `pnpm update`根据指定的范围更新软件的最新版本
