@@ -38,4 +38,6 @@ rollup --config my.config.js
 --no-strict: 在生成的包中省略`use strict`
 --interop: 包含公共的模块（这个选项是默认添加的）
 --intro: 在打包好的文件的块的内部的最顶部插入一段内容
+--banner: 在打包好的文件块的外部(wrapper外部)的最顶部插入一段内容
+--footer: 在打包好的文件块的外部(wrapper外部)的最底部插入一段内容
 ```
