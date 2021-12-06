@@ -65,6 +65,14 @@ interface ImportMeta {
 
 这意味着当执行`vite build`时，它会自动加载`.env.production`中存在的环境变量
 
+```
+# .env.production
+
+VITE_APP_TITLE=My App
+```
+
+在应用中，可以使用`import.meta.env.VITE_APP_TITLE`渲染标题
+
 然而，重要的是理解**模式**是一个更广泛的概念，而不仅仅是开发和生产。一个典型的例子是，
 你希望有一个`staging`（预发布）模式，它应该具备类似生产的行为，但环境变量与生产环境略有不同
 
@@ -75,3 +83,9 @@ vite build --mode staging
 ```
 
 为了使应用实现预期行为，我们还需要一个`.env.staging`文件
+
+```
+# .env.staging
+NODE_ENV=production
+VITE_APP_TITLE=My App (staging)
+```

@@ -144,6 +144,10 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 - [环境变量和模式](./docs/vite/env-mode.md)
 
+- [构建选项](./docs/vite/build-config.md)
+
+- [配置 Vite](./docs/vite/vite-config.md)
+
 ## Lint
 
 - [概述](./docs/lint/overview.md)
