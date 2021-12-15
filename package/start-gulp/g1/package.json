@@ -1,0 +1,15 @@
+{
+  "name": "g1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp --require sucrase/register default taska"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sucrase": "^3.20.3"
+  }
+}
