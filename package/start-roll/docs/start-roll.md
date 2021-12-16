@@ -18,4 +18,6 @@
 
 - [Rollup + Babel New](../../shared-use/docs/overview.md)
 
-- [插件开发]()
+- [插件开发](./plugin-development.md)
+
+- [Rollup 与其他工具集成](./intergration.md)
