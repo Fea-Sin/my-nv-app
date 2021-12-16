@@ -27,6 +27,7 @@ Node 库以多种方式处理异步功能。最常见的模式是`error-first ca
 `streams`, `promises`, `event emitters`, `child processes`或`observables`
 
 > **error-first callbacks**
+>
 > 大多数的异步方法的执行都遵循 Node.js 核心 API 被称为`error-first callback`模式
 > 这种模式，异步操作会传入一个回调函数作为参数，异步操作或者是执行完成，或者是因为异常而产生错误
 > 此时，回调函数的第一个参数，或者传入异常时的`Error object`，或者正常执行时传入`null`

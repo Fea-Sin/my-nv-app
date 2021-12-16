@@ -6,7 +6,9 @@ gulp 暴露了`src()`和`dest()`方法用于处理计算机上存放的文件
 读取到内存中并通过流(stream)进行处理
 
 > **Stream**
+>
 > Source Code: lib/stream.js
+>
 > stream 是一个抽象接口，在 Node.js working with `streaming data`
 >
 > `stream`模块提供了实现 stream 接口的 API
