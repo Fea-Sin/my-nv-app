@@ -64,6 +64,8 @@ Rollup 统一了前端模块模式，`ES module`、`CommonJS`、`UMD`、`IIFE`�
 
 ## [Gulp 深入工作流](./package/start-gulp/docs/overview.md)
 
+## [esbuild](./package/start-esbuild/docs/overview.md)
+
 ## Run your unit tests
 
 ```
