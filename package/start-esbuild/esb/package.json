@@ -1,0 +1,12 @@
+{
+  "name": "esb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "builda": "esbuild --bundle input.js --outfile=output.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
