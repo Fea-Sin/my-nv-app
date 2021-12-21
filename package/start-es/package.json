@@ -1,0 +1,16 @@
+{
+  "name": "start-es",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "serve public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^13.0.2"
+  }
+}
