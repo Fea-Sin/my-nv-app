@@ -62,3 +62,7 @@ export default {
   ],
 };
 ```
+
+## 插件实例
+
+- [only-default-for-entry](../../rollup-plugin/rollup.config.js)
