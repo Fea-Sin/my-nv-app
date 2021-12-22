@@ -1,4 +1,4 @@
-import { b as bar } from './bar-dc4ff25b.js';
+import { b as bar } from './bar-0979a64c.js';
 
 const result = bar + " and main";
 
