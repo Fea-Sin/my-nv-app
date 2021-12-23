@@ -1,6 +1,6 @@
 let result;
 
-import('./foo-2c22804d.js').then(({ default: foo }) => {
+import('./foo-f5a48810.js').then(({ default: foo }) => {
   result = foo + "and exama index";
 });
 
