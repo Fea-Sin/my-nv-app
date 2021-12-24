@@ -70,3 +70,5 @@ export default {
 - [augment-with-date](../../rollup-plugin/plugin/augment-with-date.js)
 
 - [build-for-end](../../rollup-plugin/plugin/build-end.js)
+
+- [svgResolverPlugin](../../rollup-plugin/plugin/svg-resolver-plugin.js)
