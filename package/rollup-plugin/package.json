@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rollup -c",
     "builda": "rollup --config rollup.config.a.js",
-    "buildb": "rollup --config rollup.config.b.js"
+    "buildb": "rollup --config rollup.config.b.js",
+    "buildc": "rollup --config examc/rollup.config.js"
   },
   "keywords": [],
   "author": "",
